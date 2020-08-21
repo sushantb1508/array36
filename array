@@ -1,0 +1,26 @@
+def missingelementbinary(arr1,arr2,n):
+    left=0
+    right=n-1
+    index=n
+    while(left<=right):
+        mid=int(left+right/2)
+        if arr1[mid]==arr2[mid]:
+            left=mid+1
+        else:
+            index=mid
+            right=mid-1
+    return index
+if __name__ == '__main__':
+    arr1 = [2, 4, 6, 8, 10, 12, 13] 
+    arr2 = [2, 4, 6, 8, 10, 12] 
+    n = len(arr2)
+    ans=missingelementbinary(arr1,arr2,n)
+    print(ans)
+    
+
+        
+        
+        
+        
+        
+    
